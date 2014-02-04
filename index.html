@@ -15,7 +15,13 @@
             <p>__{{displayingFromCtrl}}</p>
             <p>__{{childCtrlVariable}}</p>
         </div>
+        <div>
+            example of nested model
+            <input ng-model="user.house.number"/>
+            <button ng-click="displayHouseNumber()">clickme</button>
+        </div>
     </div>
+
 
 
     <script src="lib/angular/angular.js"></script>
