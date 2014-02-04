@@ -1,0 +1,10 @@
+{
+    "name": "demo-restful-api",
+    "description": "demo of simple restful api, forked from https://github.com/onmodulus/express-rest-api-example",
+    "private" : true,
+    "version": "0.0.1",
+    "dependencies": {
+    "express": "3.x"
+},
+    "main" : "quote"
+}
