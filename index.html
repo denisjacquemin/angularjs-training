@@ -9,11 +9,18 @@
 
     <p ng-init = "stuffToDisplay= 'Hello, World!'">Writing an expression thanks to ng-init <strong>{{stuffToDisplay}}</strong></p>
 
-    <p ng-controller = "Exo2Ctrl">Writing from controller, thanks to the scope <strong>{{displayingFromCtrl}}</strong></p>
+    <div ng-controller = "Exo2Ctrl">
+        Writing from controller, thanks to the scope <strong>{{displayingFromCtrl}}</strong>
+        <div ng-controller = "ChildCtrl">
+            <p>__{{displayingFromCtrl}}</p>
+            <p>__{{childCtrlVariable}}</p>
+        </div>
+    </div>
 
 
     <script src="lib/angular/angular.js"></script>
     <script src="app/app.js"></script>
     <script src="app/exo2/exo2Ctrl.js"></script>
+    <script src="app/exo2/childCtrl.js"></script>
 </body>
 </html>
