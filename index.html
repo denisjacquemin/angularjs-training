@@ -5,12 +5,15 @@
 </head>
 <body>
 
-    <p>example of  1 + 2 = {{1 + 2}}</p>
+    <p>example of  1 + 2 = <strong>{{1 + 2}}</strong></p>
 
-    <p ng-init = "stuffToDisplay= 'Hello, World!'">Writing an expression thanks to ng-init {{stuffToDisplay}}</p>
+    <p ng-init = "stuffToDisplay= 'Hello, World!'">Writing an expression thanks to ng-init <strong>{{stuffToDisplay}}</strong></p>
+
+    <p ng-controller = "Exo2Ctrl">Writing from controller, thanks to the scope <strong>{{displayingFromCtrl}}</strong></p>
 
 
     <script src="lib/angular/angular.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/exo2/exo2Ctrl.js"></script>
 </body>
 </html>
