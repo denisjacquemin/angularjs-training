@@ -11,4 +11,7 @@ myApp.controller('Exo2Ctrl', function ($scope) {
         console.log($scope.user.house.number);
     };
 
+    $scope.$on("EVENT-FROM-CHILD", function (event, arg1) {
+        console.log("inside Parent controller, received " + arg1);
+    });
 });
