@@ -12,7 +12,14 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'app/error/error.html'
         }).when('/exo4', {
             templateUrl: 'app/exo4/exo4.html',
-            controller: 'Exo4Ctrl'
+            controller: 'Exo4Ctrl',
+            resolve: {
+                loadedDatas: function ($q, HttpSrvc) {
+                    //var deferred = $q.defer();
+                    return HttpSrvc.wrappedGet("/rest/quote");
+                    //return deferred.promise;
+                }
+            }
         }).otherwise({
             redirectTo: '/error'
         });

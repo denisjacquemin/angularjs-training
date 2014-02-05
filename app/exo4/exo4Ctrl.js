@@ -2,14 +2,8 @@
 /* global console */
 "use strict";
 
-myApp.controller('Exo4Ctrl', function ($scope, HttpSrvc) {
+myApp.controller('Exo4Ctrl', function ($scope, HttpSrvc, loadedDatas) {
     $scope.doesItWorks = "Yes it works";
-//    console.log("HttpSrvc is ");
-//    console.log(HttpSrvc);
     //$scope.datas = HttpSrvc.getData();
-    HttpSrvc.wrappedGet("/rest/quote").then(
-        function successCallback(quotes) {
-            $scope.datas = quotes;
-        }
-    );
+    $scope.datas = loadedDatas;
 });
