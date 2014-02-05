@@ -14,10 +14,19 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'app/exo4/exo4.html',
             controller: 'Exo4Ctrl',
             resolve: {
-                loadedDatas: function ($q, HttpSrvc) {
-                    //var deferred = $q.defer();
-                    return HttpSrvc.wrappedGet("/rest/quote");
-                    //return deferred.promise;
+                loadedDatas: function ($q, $window, HttpSrvc, u) {
+                    var deferred = $q.defer();
+
+                    var handleWrappedGetSuccess = function (quotes) {
+                        var id = Math.floor(Math.random() * quotes.length);
+                        //quotes.splice(id, 1);
+                        quotes =
+                            u.reject(quotes, function (num, index) {return u.isEqual(index, id); });
+                        deferred.resolve(quotes);
+                    };
+
+                    HttpSrvc.wrappedGet("/rest/quote").then(handleWrappedGetSuccess);
+                    return deferred.promise;
                 }
             }
         }).otherwise({
