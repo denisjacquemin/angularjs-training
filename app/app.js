@@ -11,6 +11,8 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'app/exo2/exo2.html'
         }).when('/error', {
             templateUrl: 'app/error/error.html'
+        }).when('/exo5', {
+            templateUrl: 'app/exo5/exo5.html'
         }).when('/exo4', {
             templateUrl: 'app/exo4/exo4.html',
             controller: 'Exo4Ctrl',
