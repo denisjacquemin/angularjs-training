@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
-    <title></title>
 </head>
 <body>
+    <div ng-view></div>
+    <script src="lib/underscore-min.js"></script>
+    <!-- angular first -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-router.js"></script>
 
+    <!-- app second -->
+    <script src="app/app.js"></script>
+
+    <!-- everything else after -->
+    <script src="app/shared/underscoreFcty.js"></script>
+    <script src="app/helloWorldCtrl.js"></script>
+    <script src="app/nestedCtrl.js"></script>
+    <script src="app/shared/httpSrvc.js"></script>
+    <script src="app/exo4/exo4Ctrl.js"></script>
 </body>
 </html>

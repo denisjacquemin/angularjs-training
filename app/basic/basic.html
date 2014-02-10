@@ -1,0 +1,13 @@
+<div>
+    <p>try {{1+2}}</p>
+    <p class="hwc" ng-init="sample='Hello World'">
+        using ng-init: <strong>{{sample}}</strong>
+    </p>
+
+    <div ng-controller="HelloWorldCtrl">
+        Using controller: <strong>{{other}} {{mynested}}</strong>
+        <p ng-controller="NestedCtrl">
+            {{other}} {{mynested}}
+        </p>
+    </div>
+</div>
