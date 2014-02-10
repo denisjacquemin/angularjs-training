@@ -32,8 +32,22 @@ myApp.config( function($routeProvider) {
                     return deffered.promise;
                 }
             }
+        }).when('/exo5', {
+                    templateUrl: 'app/exo5/exo5.html'
         }).when('/error', {
             templateUrl: 'app/error/error.html'
         })
         .otherwise({ redirectTo: '/error' });
+});
+
+
+myApp.run(function($rootScope) {
+
+    $rootScope.$on("$routeChangeSuccess", function() {
+        console.log('Route changed with success');
+        for (var i=0; i < arguments.length; i += 1) {
+            console.log(arguments[i]);
+        }
+    });
+
 });
