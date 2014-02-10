@@ -5,9 +5,10 @@
     </p>
 
     <div ng-controller="HelloWorldCtrl">
-        Using controller: <strong>{{other}} {{mynested}}</strong>
+        Using controller: <strong>{{other}}</strong>
         <p ng-controller="NestedCtrl">
-            {{other}} {{mynested}}
+            {{mynested}}
+            <button ng-click="iamclicked()">click me</button>
         </p>
     </div>
 </div>
